@@ -5,4 +5,4 @@
 STATIC_ROOT = '/opt/sujaymansingh.com/static/'
 
 COUNTDOWN_DATA_DIR = '/opt/sujaymansingh.com/countdown_data/'
-COUNTDOWN_PHOTO_BASE = '/countdown/'
+COUNTDOWN_PHOTO_BASE = '/countdown_data/'
