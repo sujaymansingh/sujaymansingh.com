@@ -1,0 +1,72 @@
+ul {
+    list-style-type: none;
+}
+
+body {
+    background: #406Af2;
+}
+
+.date_item {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    float: left;
+    background: #d09622;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.blank {
+    background: transparent;
+}
+
+.date_daynum {
+    font-family: helvetica, arial, sans-serif;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+h4, .date_daynum {
+    font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 20pt;
+}
+
+h4, .text_colour_light {
+    color: #fff;
+}
+
+.text_colour_dark {
+    color: #000;
+}
+
+h4 {
+    letter-spacing: 0.01em;
+    line-height: 24pt;
+    margin: 5px;
+}
+
+
+.date_image_main {
+}
+.date_image_inset {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.date_container {
+    width: 712px;
+    position: relative;
+}
+
+.date_container h4 {
+    position: absolute;
+    left: 0px;
+    bottom: -50px;
+}
+
+.breaker {
+    clear: both;
+}

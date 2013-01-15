@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}countdown/css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}countdown/css/jquery.lightbox.css"/>
+        <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/jquery.lightbox.min.js"></script>
+        <title>Countdown!</title>
+    </head>
+
+    <body>
+        {% for container in containers %}
+            <div class="date_container">
+                <h4>{{ container.name }}</h4>
+
+                {% for item in container.items %}
+                    {% if item.number == -1 %}
+                        <div class="date_item blank"></div>
+                    {% else %}
+                        <div class="date_item">
+                            {% if item.photo_full_url != '' %}
+                                <a href="{{ item.photo_full_url }}" 
+                                    {% if item.caption == "" %}
+                                        title="{{ container.name }} {{ item.number }}"
+                                    {% else %}
+                                        title="{{ container.name }} {{ item.number }}: {{ item.caption }}"
+                                    {% endif %}
+                                    class="lightbox" rel="lightbox[countdown]">
+                                    <img src="{{ item.photo_thumb_url }}" width="96" height="96" "/>
+                                </a>
+                            {% endif %}
+
+                            <span class="date_daynum text_colour_{{ item.text_colour }}">{{ item.number }}</span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="breaker"></div>
+        {% endfor %}
+
+        <script type="text/javascript">
+        /* Sort out the lightbox stuff. */
+        $(function() {
+            $('a.lightbox').lightBox({
+                imageBtnClose: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-btn-close.gif',
+                imageBlank: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-blank.gif',
+                imageBtnNext: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-btn-next.gif',
+                imageBtnPrev: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-btn-prev.gif',
+                imageLoading: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-ico-loading.gif'
+            }); // Select all links with lightbox class
+        });
+        </script>
+    </body>
+</html>
