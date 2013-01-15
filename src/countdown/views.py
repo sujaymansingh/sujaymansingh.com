@@ -4,8 +4,6 @@ import json
 from django import shortcuts
 from django.conf import settings
 
-from countdown import models
-
 
 def get_containers():
     data_filename = os.path.join(settings.COUNTDOWN_DATA_DIR, 'countdown_data.json')
