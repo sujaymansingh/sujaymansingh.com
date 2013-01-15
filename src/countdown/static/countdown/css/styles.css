@@ -4,6 +4,8 @@ ul {
 
 body {
     background: #406Af2;
+    color: #fff;
+    font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
 }
 
 .date_item {
@@ -27,8 +29,15 @@ body {
     top: 5px;
 }
 
+.header {
+    font-size: 20pt;
+    padding-left: 20px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+    width: 683px;
+}
+
 h4, .date_daynum {
-    font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 20pt;
 }
