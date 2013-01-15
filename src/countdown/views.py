@@ -1,8 +1,10 @@
 import os
 import json
 
+from django import http
 from django import shortcuts
 from django.conf import settings
+from django.core import urlresolvers
 
 
 def get_containers():
@@ -26,3 +28,7 @@ def home(request):
 
     items = {'containers': get_containers()}
     return shortcuts.render(request, 'countdown/home.html', items)
+
+
+def redirect(request):
+    return http.HttpResponseRedirect(urlresolvers.reverse(home))

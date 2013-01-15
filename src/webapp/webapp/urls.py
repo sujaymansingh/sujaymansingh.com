@@ -16,4 +16,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^countdown/', include("countdown.urls")),
+
+    # For now, the home page goes to countdown.
+    url(r'^$', "countdown.views.redirect"),
 )
