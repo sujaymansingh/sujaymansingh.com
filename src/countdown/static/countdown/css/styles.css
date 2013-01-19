@@ -60,6 +60,10 @@ body {
     width: 683px;
 }
 
+#countdown_counter, .bigtext {
+    font-size: 20px;
+}
+
 h4, .date_daynum {
     font-weight: 200;
     font-size: 20pt;
