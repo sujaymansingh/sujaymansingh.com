@@ -1,3 +1,4 @@
+import datetime
 import os
 import json
 
@@ -26,8 +27,12 @@ def get_containers():
 
 def home(request):
 
-    items = {'containers': get_containers()}
-    return shortcuts.render(request, 'countdown/home.html', items)
+    context = {
+        'containers': get_containers(),
+        'current_time': datetime.datetime.now().isoformat(),
+        'wedding_time': datetime.datetime(2013, 2, 16, 16, 30, 00).isoformat(),
+    }
+    return shortcuts.render(request, 'countdown/home.html', context)
 
 
 def redirect(request):

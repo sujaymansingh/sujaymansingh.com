@@ -4,13 +4,31 @@
         <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}countdown/css/jquery.lightbox.css"/>
         <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/jquery.min.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/jquery.lightbox.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/moment.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/countdown.js"></script>
         <title>Countdown!</title>
     </head>
 
-    <body>
-        <div class="header">
-            The countdown begins!
+    <body onload="">
+        <div class="block block2x1">
+            <div>The countdown begins!</div>
         </div>
+        <div class="block block2x1">
+            <div>
+                Time till wedding:<br/>
+                <span id="countdown_counter"></span>
+            </div>
+        </div>
+        <div class="block block3x1">
+            <div>
+                <a href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
+                    <img src="{{ STATIC_URL }}countdown/img/gift.png" style="float: right; margin-right: 5px"/>
+                    Click here to view our wedding list (number: 534545)
+                </a>
+            </div>
+        </div>
+
+        <div class="breaker"></div>
 
         {% for container in containers %}
             <div class="date_container">
@@ -52,6 +70,17 @@
                 imageLoading: '{{ STATIC_URL }}countdown/img/jquery.lightbox/lightbox-ico-loading.gif'
             }); // Select all links with lightbox class
         });
+
+        function countdown_callback(days, hours, minutes, seconds) {
+            $('#countdown_counter').html(
+                days + ' days <br/>' +
+                hours + 'h ' + minutes + 'm ' + seconds + 's '
+            );
+        }
+
+        $(function() {
+            countdown_init('{{current_time}}', '{{wedding_time}}', countdown_callback);
+        })
         </script>
     </body>
 </html>

@@ -18,6 +18,29 @@ body {
     margin-bottom: 5px;
 }
 
+.block {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: #d09622;
+    float: left;
+    height: 96px;
+    text-align:center;
+    display: table;
+}
+.block div {
+    display: table-cell;
+    vertical-align:middle;
+}
+.block1x1 {
+    width: 96px;
+}
+.block2x1 {
+    width: 197px;
+}
+.block3x1 {
+    width: 298px;
+}
+
 .blank {
     background: transparent;
 }
