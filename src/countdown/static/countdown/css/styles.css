@@ -41,6 +41,14 @@ body {
     width: 298px;
 }
 
+.main_content {
+    float: left;
+}
+.righthand_content {
+    float: left;
+    width: 500px;
+}
+
 .blank {
     background: transparent;
 }
