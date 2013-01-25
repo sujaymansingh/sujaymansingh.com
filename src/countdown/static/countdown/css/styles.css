@@ -41,6 +41,9 @@ body {
     width: 298px;
 }
 
+.container_block {
+    width: 1200px;
+}
 .main_content {
     float: left;
 }

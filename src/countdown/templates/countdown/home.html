@@ -19,61 +19,64 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div class="main_content">
-            <div class="block block2x1">
-                <div class="bigtext">The countdown begins!</div>
-            </div>
-            <div class="block block2x1">
-                <div>
-                    <span id="countdown_counter"></span>
-                </div>
-            </div>
-            <div class="block block3x1">
-                <div>
-                    <a href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
-                        <img src="{{ STATIC_URL }}countdown/img/gift.png" style="float: right; margin-right: 5px"/>
-                        Click here to view our wedding list (number: 534545)
-                    </a>
-                </div>
-            </div>
-    
-            <div class="breaker"></div>
-    
-            {% for container in containers %}
-                <div class="date_container">
-                    <h4>{{ container.name }}</h4>
-    
-                    {% for item in container.items %}
-                        {% if item.number == -1 %}
-                            <div class="date_item blank"></div>
-                        {% else %}
-                            <div class="date_item">
-                                {% if item.photo_full_url != '' %}
-                                    <a href="{{ item.photo_full_url }}" 
-                                        class="lightbox" rel="prettyPhoto[countdown]">
-                                        <img src="{{ item.photo_thumb_url }}" alt="{{ container.name }} {{ item.number }}: {{ item.caption }}" width="96" height="96" "/>
-                                    </a>
-                                {% endif %}
-    
-                                <span class="date_daynum text_colour_{{ item.text_colour }}">{{ item.number }}</span>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="breaker"></div>
-            {% endfor %}
-        </div>
+        <div class="container_block">
 
-        <div class="righthand_content">
-            <div class="heading">Facebook</div>
-            <div class="fb-comments" data-href="http://www.sujaymansingh.com/countdown/" data-width="470" data-num-posts="10"></div>
+            <div class="main_content">
+                <div class="block block2x1">
+                    <div class="bigtext">The countdown begins!</div>
+                </div>
+                <div class="block block2x1">
+                    <div>
+                        <span id="countdown_counter"></span>
+                    </div>
+                </div>
+                <div class="block block3x1">
+                    <div>
+                        <a href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
+                            <img src="{{ STATIC_URL }}countdown/img/gift.png" style="float: right; margin-right: 5px"/>
+                            Click here to view our wedding list (number: 534545)
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="breaker"></div>
+        
+                {% for container in containers %}
+                    <div class="date_container">
+                        <h4>{{ container.name }}</h4>
+        
+                        {% for item in container.items %}
+                            {% if item.number == -1 %}
+                                <div class="date_item blank"></div>
+                            {% else %}
+                                <div class="date_item">
+                                    {% if item.photo_full_url != '' %}
+                                        <a href="{{ item.photo_full_url }}" 
+                                            class="lightbox" rel="prettyPhoto[countdown]">
+                                            <img src="{{ item.photo_thumb_url }}" alt="{{ container.name }} {{ item.number }}: {{ item.caption }}" width="96" height="96" "/>
+                                        </a>
+                                    {% endif %}
+        
+                                    <span class="date_daynum text_colour_{{ item.text_colour }}">{{ item.number }}</span>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="breaker"></div>
+                {% endfor %}
+            </div>
+    
+            <div class="righthand_content">
+                <div class="heading">Facebook</div>
+                <div class="fb-comments" data-href="http://www.sujaymansingh.com/countdown/" data-width="470" data-num-posts="10"></div>
+            </div>
+
         </div>
 
         <script type="text/javascript">
         /* Sort out the lightbox stuff. */
     	$(document).ready(function(){
     		$("a[rel^='prettyPhoto']").prettyPhoto({
-                social_tools: ''
             });
     	});
 
