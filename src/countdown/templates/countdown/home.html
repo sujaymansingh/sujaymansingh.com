@@ -61,7 +61,9 @@
         <script type="text/javascript">
         /* Sort out the lightbox stuff. */
     	$(document).ready(function(){
-    		$("a[rel^='prettyPhoto']").prettyPhoto();
+    		$("a[rel^='prettyPhoto']").prettyPhoto({
+                social_tools: ''
+            });
     	});
 
         function countdown_callback(days, hours, minutes, seconds) {
