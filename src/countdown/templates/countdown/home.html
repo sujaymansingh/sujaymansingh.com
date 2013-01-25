@@ -22,14 +22,15 @@
         <div class="container_block">
 
             <div class="main_content">
-                <div class="block block2x1">
+                <div class="block block3x1">
                     <div class="bigtext">The countdown begins!</div>
                 </div>
-                <div class="block block2x1">
+                <div class="block block4x1">
                     <div>
                         <span id="countdown_counter"></span>
                     </div>
                 </div>
+                <!--
                 <div class="block block3x1">
                     <div>
                         <a href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
@@ -38,6 +39,7 @@
                         </a>
                     </div>
                 </div>
+                -->
         
                 <div class="breaker"></div>
         
@@ -82,7 +84,7 @@
 
         function countdown_callback(days, hours, minutes, seconds) {
             $('#countdown_counter').html(
-                days + ' days <br/>' +
+                days + ' days ' +
                 hours + 'h ' + minutes + 'm ' + seconds + 's '
             );
         }
