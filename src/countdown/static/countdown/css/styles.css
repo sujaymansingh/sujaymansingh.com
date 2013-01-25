@@ -46,7 +46,16 @@ body {
 }
 .righthand_content {
     float: left;
-    width: 500px;
+    background: #fff;
+}
+.righthand_content .heading {
+    background: #6d84b4;
+    border-bottom: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px;
 }
 
 .blank {
