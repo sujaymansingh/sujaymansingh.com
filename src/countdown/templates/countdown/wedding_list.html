@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <script type="text/javascript" src="{{ STATIC_URL }}countdown/js/jquery.min.js"></script>
+        <link href="{{ STATIC_URL }}countdown/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="{{ STATIC_URL }}countdown/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+
+    <div class="container" style="width: 740px">
+        <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                        Step 1
+                    </a>
+                </div>
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="row">
+                        <div class="accordion-inner">
+                            <div class="span4">
+                                    <h3>Visit the John Lewis wedding list page</h3>
+                                    <div>
+                                        Visit the John Lewis wedding list page.
+                                        Then click on 'buy gift' (as in the picture).<br/>
+                                        <br/>
+                                        
+                                        <a class="btn btn-primary" target="_new" href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
+                                            John Lewis wedding list site:
+                                        </a>
+                                    </div>
+                            </div>
+                            <div class="span5">
+                                <img src="{{ STATIC_URL }}countdown/img/buy_a_gift.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                        Step 2
+                    </a>
+                </div>
+                <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="row">
+                        <div class="accordion-inner">
+                            <div class="span4">
+                                <h3>Enter our list number</h3>
+                                <div>
+                                    Then enter our list number: 534545 and then click 'Display List' to view our list.
+                                </div>
+                            </div>
+                            <div class="span5">
+                                <img src="{{ STATIC_URL }}countdown/img/enter_list_number.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                        Step 3
+                    </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse">
+                    <div class="row">
+                        <div class="accordion-inner">
+                            <div class="span4">
+                                <h3>Choose an amount and click 'buy gift'</h3>
+                                <div>
+                                    Enter an amount and click 'buy gift'. Remember to enter your name on the payment screen!
+                                </div>
+                            </div>
+                            <div class="span5">
+                                <img src="{{ STATIC_URL }}countdown/img/how_to_buy.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

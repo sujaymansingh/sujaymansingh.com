@@ -35,5 +35,10 @@ def home(request):
     return shortcuts.render(request, 'countdown/home.html', context)
 
 
+def wedding_list(request):
+
+    return shortcuts.render(request, 'countdown/wedding_list.html', {})
+
+
 def redirect(request):
     return http.HttpResponseRedirect(urlresolvers.reverse(home))

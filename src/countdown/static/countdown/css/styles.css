@@ -33,15 +33,32 @@ body {
 }
 .block1x1 {
     width: 96px;
+    position: relative;
 }
 .block2x1 {
     width: 197px;
+    position: relative;
 }
 .block3x1 {
     width: 298px;
+    position: relative;
 }
 .block4x1 {
     width: 399px;
+    position: relative;
+}
+
+.overlay {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+}
+
+.darkbox {
+    background: #6d84b4;
 }
 
 .container_block {

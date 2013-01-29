@@ -25,11 +25,23 @@
                 <div class="block block3x1">
                     <div class="bigtext">The countdown begins!</div>
                 </div>
-                <div class="block block4x1">
+                <div class="block block3x1">
                     <div>
                         <span id="countdown_counter"></span>
                     </div>
                 </div>
+                <div class="block block1x1 darkbox">
+                    <div>
+                        <a href="{% url countdown_wedding_list %}?iframe=true&width=750&height=100%" rel="prettyPhoto[iframes]">
+                            <img src="{{ STATIC_URL }}countdown/img/gift.png"/>
+
+                            <div class="overlay">
+                                Our Wedding List
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <!--
                 <div class="block block3x1">
                     <div>
