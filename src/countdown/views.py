@@ -36,8 +36,11 @@ def home(request):
 
 
 def wedding_list(request):
-
     return shortcuts.render(request, 'countdown/wedding_list.html', {})
+
+
+def notes(request):
+    return shortcuts.render(request, 'countdown/notes.html', {})
 
 
 def redirect(request):

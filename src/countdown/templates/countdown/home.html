@@ -22,14 +22,13 @@
         <div class="container_block">
 
             <div class="main_content">
-                <div class="block block3x1">
-                    <div class="bigtext">The countdown begins!</div>
-                </div>
-                <div class="block block3x1">
-                    <div>
-                        <span id="countdown_counter"></span>
+
+                <div class="block block6x1">
+                    <div class="bigtext">
+                        The countdown begins!
                     </div>
                 </div>
+
                 <div class="block block1x1 darkbox">
                     <div>
                         <a href="{% url countdown_wedding_list %}?iframe=true&width=750&height=100%" rel="prettyPhoto[iframes]">
@@ -42,16 +41,23 @@
                     </div>
                 </div>
 
-                <!--
-                <div class="block block3x1">
+                <div class="breaker"></div>
+
+                <div class="block block4x1">
                     <div>
-                        <a href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/glsmain.jsp">
-                            <img src="{{ STATIC_URL }}countdown/img/gift.png" style="float: right; margin-right: 5px"/>
-                            Click here to view our wedding list (number: 534545)
-                        </a>
+                        <span id="countdown_counter"></span>
                     </div>
                 </div>
-                -->
+                <div class="block block3x1">
+                    <div>
+                        <a href="{% url countdown_notes %}?iframe=true&width=740&height=450" rel="prettyPhoto[iframes]">
+                            <img src="{{ STATIC_URL }}countdown/img/sushai.jpg"/>
+                        </a>
+                        <div class="overlay">
+                            Shaina on Sujay and Sujay on Shaina
+                        </div>
+                    </div>
+                </div>
         
                 <div class="breaker"></div>
         

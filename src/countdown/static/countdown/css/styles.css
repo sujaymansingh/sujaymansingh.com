@@ -47,8 +47,21 @@ body {
     width: 399px;
     position: relative;
 }
+.block5x1 {
+    width: 500px;
+    position: relative;
+}
+.block6x1 {
+    width: 601px;
+    position: relative;
+}
+.block7x1 {
+    width: 702px;
+    position: relative;
+}
 
 .overlay {
+    background-color:rgba(0,0,0,0.7);
     color: #fff;
     font-size: 12px;
     position: absolute;
