@@ -70,6 +70,10 @@ body {
     bottom: 0px;
 }
 
+.whitebox {
+    background: #fff;
+}
+
 .darkbox {
     background: #6d84b4;
 }

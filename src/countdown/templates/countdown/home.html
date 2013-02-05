@@ -23,9 +23,27 @@
 
             <div class="main_content">
 
-                <div class="block block6x1">
+                <div class="block block7x1">
                     <div class="bigtext">
                         The countdown begins!
+                    </div>
+                </div>
+
+                <div class="breaker"></div>
+
+                <div class="block block5x1">
+                    <div>
+                        <span id="countdown_counter"></span>
+                    </div>
+                </div>
+                <div class="block block1x1 whitebox">
+                    <div>
+                        <a href="{% url countdown_notes %}?iframe=true&width=740&height=450" rel="prettyPhoto[iframes]">
+                            <img src="{{ STATIC_URL }}countdown/img/pen.png"/>
+                        </a>
+                        <div class="overlay">
+                            Our <br/> Notes
+                        </div>
                     </div>
                 </div>
 
@@ -38,24 +56,6 @@
                                 Our Wedding List
                             </div>
                         </a>
-                    </div>
-                </div>
-
-                <div class="breaker"></div>
-
-                <div class="block block4x1">
-                    <div>
-                        <span id="countdown_counter"></span>
-                    </div>
-                </div>
-                <div class="block block3x1">
-                    <div>
-                        <a href="{% url countdown_notes %}?iframe=true&width=740&height=450" rel="prettyPhoto[iframes]">
-                            <img src="{{ STATIC_URL }}countdown/img/sushai.jpg"/>
-                        </a>
-                        <div class="overlay">
-                            Shaina on Sujay and Sujay on Shaina
-                        </div>
                     </div>
                 </div>
         
